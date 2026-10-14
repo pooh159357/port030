@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio: About, Highlights, Skills, and Contact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"/>
+      <head>
+        <style>
+            :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --panel: #f9fafb;
+        --panel-2: #f3f4f6;
+        --accent: #2563eb;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --max: 1100px;
+
+        /* Anchor offset for sticky navbar (JS will update) */
+        --navH: 64px;
+      }
+        .container {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+        /* Sections */
+      section {
+        padding: 22px 0;
+      }
+
+      section[id] {
+        scroll-margin-top: calc(var(--navH) + 12px);
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: 20px;
+        letter-spacing: 0.1px;
+      }
+
+      .section-note {
+        margin: 0;
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 13px;
+
+      }
+      .card {
+        border-radius: var(--radius);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 14px;
+      }
+      .card-text {
+        margin: 10px 0 0;
+        color: var(--muted);
+      }
+      </style>
+    </head>
+    <!-- ABOUT -->
+      <section id="about">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">About Me</h2>
+          </div>
+
+          <div class="card">
+            <p class="card-text">
+              นักศึกษาชั้นปีที่ 2 สาขาวิศวกรรมซอฟต์แวร์
+              มีประสบการณ์การทำงานเป็นทีมในการออกแบบและพัฒนาระบบตามความต้องการของบริษัท
+              ทั้งบนแพลตฟอร์มเดสก์ท็อปและอุปกรณ์เคลื่อนที่
+              และกำลังมองหาโอกาสในการพัฒนาทักษะของตนเอง
+              เพื่อนำความรู้และประสบการณ์ที่มีไปประยุกต์ใช้ในการทำงานจริง
+            </p>
+          </div>
+        </div>
+      </section>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio: About, Highlights, Skills, and Contact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"/>
+      <head>
+        <style>
+            :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --panel: #f9fafb;
+        --panel-2: #f3f4f6;
+        --accent: #2563eb;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --max: 1100px;
+
+        /* Anchor offset for sticky navbar (JS will update) */
+        --navH: 64px;
+      }
+        .container {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: 20px;
+        letter-spacing: 0.1px;
+      }
+
+      .card {
+        border-radius: var(--radius);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 14px;
+      }
+
+      .card-title {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .card-sub {
+        margin: 0;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .card-text {
+        margin: 10px 0 0;
+        color: var(--muted);
+      }
+    .pill-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .pill {
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        font-weight: 800;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      </style>
+      </head>
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Skills</h2>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card">
+              <h3 class="card-title">Programming</h3>
+              <div class="pill-wrap">
+                <span class="pill">JavaScript</span>
+                <span class="pill">Java</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Database</h3>
+              <div class="pill-wrap">
+                <span class="pill">MySQL</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Frameworks</h3>
+              <div class="pill-wrap">
+                <span class="pill">React</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Design Tools</h3>
+              <div class="pill-wrap">
+                <span class="pill">Figma</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Tools</h3>
+              <div class="pill-wrap">
+                <span class="pill">Docker</span>
+                <span class="pill">VS Code</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Version Control</h3>
+              <div class="pill-wrap">
+                <span class="pill">GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio: About, Highlights, Skills, and Contact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"/>
+      <head>
+        <style>
+            :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --panel: #f9fafb;
+        --panel-2: #f3f4f6;
+        --accent: #2563eb;
+        --radius: 14px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --max: 1100px;
+
+        /* Anchor offset for sticky navbar (JS will update) */
+        --navH: 64px;
+      }
+        .container {
+        width: min(var(--max), calc(100% - 32px));
+        margin: 0 auto;
+      }
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: 20px;
+        letter-spacing: 0.1px;
+      }
+      .card {
+        border-radius: var(--radius);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        padding: 14px;
+      }
+
+      .card-title {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+       /* Contact links */
+      .socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .social {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        font-weight: 800;
+        
+      }
+
+      .social:hover {
+        background: var(--panel-2);
+      }
+
+      .social svg {
+        width: 18px;
+        height: 18px;
+      }
+      </style>
+      </head>
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Contact Me</h2>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Social</h3>
+
+            <div class="socials" style="margin-top: 10px">
+              <!-- LINE -->
+              <a
+                class="social"
+                href="https://line.me/ti/p/S-ewH2rlYh"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="iconify" data-icon="simple-icons:line"></span>
+                LINE
+              </a>
+
+              <!-- Facebook -->
+              <a
+                class="social"
+                href="https://www.facebook.com/profile.php?id=61562840742399&locale=th_TH"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="iconify" data-icon="logos:facebook"></span>
+                Facebook
+              </a>
+
+              <!-- Instagram -->
+              <a
+                class="social"
+                href="https://www.instagram.com/poohzo159357/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="iconify" data-icon="logos:instagram-icon"></span>
+                Instagram
+              </a>
+
+              <!-- GitHub -->
+              <a
+                class="social"
+                href="https://github.com/pooh159357"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="iconify" data-icon="logos:github-icon"></span>
+                GitHub
+              </a>
+
+              <!-- Discord -->
+              <a
+                class="social"
+                href="https://discord.com/users/463857570004598784"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="iconify" data-icon="logos:discord-icon"></span>
+                Discord
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
