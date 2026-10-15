@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Portfolio</title>
+  <meta name="description" content="Personal portfolio: About, Highlights, Skills, and Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <head>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Portfolio</title>
-    <meta
-      name="description"
-      content="Personal portfolio: About, Highlights, Skills, and Contact."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"/>
-      <head>
-        <style>
-            :root {
+    <style>
+      :root {
         --bg: #ffffff;
         --text: #111827;
         --muted: #6b7280;
@@ -31,10 +28,67 @@
         /* Anchor offset for sticky navbar (JS will update) */
         --navH: 64px;
       }
-        .container {
+
+      .container {
         width: min(var(--max), calc(100% - 32px));
         margin: 0 auto;
       }
+
+      /* Navbar */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        gap: 14px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 14px;
+        border: 1px solid transparent;
+      }
+
+      .nav-links a:hover {
+        background: var(--panel);
+        color: var(--text);
+      }
+
       .section-head {
         display: flex;
         align-items: end;
@@ -48,6 +102,7 @@
         font-size: 20px;
         letter-spacing: 0.1px;
       }
+
       .card {
         border-radius: var(--radius);
         background: var(--panel);
@@ -59,7 +114,23 @@
         margin: 0 0 6px;
         font-size: 16px;
       }
-       /* Contact links */
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      /* Contact links */
       .socials {
         display: flex;
         flex-wrap: wrap;
@@ -75,7 +146,7 @@
         border: 1px solid var(--line);
         background: #ffffff;
         font-weight: 800;
-        
+
       }
 
       .social:hover {
@@ -86,74 +157,67 @@
         width: 18px;
         height: 18px;
       }
-      </style>
-      </head>
-      <!-- CONTACT -->
-      <section id="contact">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">Contact Me</h2>
-          </div>
+    </style>
+  </head>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot"></span>
+          <span>My Profile</span>
+        </a>
 
-          <div class="card">
-            <h3 class="card-title">Social</h3>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="about.html">About</a>
+          <a href="highlights.html">Highlights</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Contact Me</h2>
+      </div>
 
-            <div class="socials" style="margin-top: 10px">
-              <!-- LINE -->
-              <a
-                class="social"
-                href="https://line.me/ti/p/S-ewH2rlYh"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="simple-icons:line"></span>
-                LINE
-              </a>
+      <div class="card">
+        <h3 class="card-title">Social</h3>
 
-              <!-- Facebook -->
-              <a
-                class="social"
-                href="https://www.facebook.com/profile.php?id=61562840742399&locale=th_TH"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:facebook"></span>
-                Facebook
-              </a>
+        <div class="socials" style="margin-top: 10px">
+          <!-- LINE -->
+          <a class="social" href="https://line.me/ti/p/S-ewH2rlYh" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="simple-icons:line"></span>
+            LINE
+          </a>
 
-              <!-- Instagram -->
-              <a
-                class="social"
-                href="https://www.instagram.com/poohzo159357/"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:instagram-icon"></span>
-                Instagram
-              </a>
+          <!-- Facebook -->
+          <a class="social" href="https://www.facebook.com/profile.php?id=61562840742399&locale=th_TH" target="_blank"
+            rel="noopener">
+            <span class="iconify" data-icon="logos:facebook"></span>
+            Facebook
+          </a>
 
-              <!-- GitHub -->
-              <a
-                class="social"
-                href="https://github.com/pooh159357"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:github-icon"></span>
-                GitHub
-              </a>
+          <!-- Instagram -->
+          <a class="social" href="https://www.instagram.com/poohzo159357/" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="logos:instagram-icon"></span>
+            Instagram
+          </a>
 
-              <!-- Discord -->
-              <a
-                class="social"
-                href="https://discord.com/users/463857570004598784"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:discord-icon"></span>
-                Discord
-              </a>
-            </div>
-          </div>
+          <!-- GitHub -->
+          <a class="social" href="https://github.com/pooh159357" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="logos:github-icon"></span>
+            GitHub
+          </a>
+
+          <!-- Discord -->
+          <a class="social" href="https://discord.com/users/463857570004598784" target="_blank" rel="noopener">
+            <span class="iconify" data-icon="logos:discord-icon"></span>
+            Discord
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>

@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Portfolio</title>
+  <meta name="description" content="Personal portfolio: About, Highlights, Skills, and Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <head>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Portfolio</title>
-    <meta
-      name="description"
-      content="Personal portfolio: About, Highlights, Skills, and Contact."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"/>
-      <head>
-        <style>
-            :root {
+    <style>
+      :root {
         --bg: #ffffff;
         --text: #111827;
         --muted: #6b7280;
@@ -31,10 +28,82 @@
         /* Anchor offset for sticky navbar (JS will update) */
         --navH: 64px;
       }
-        .container {
+
+      /* Navbar */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        gap: 14px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 14px;
+        border: 1px solid transparent;
+      }
+
+      .nav-links a:hover {
+        background: var(--panel);
+        color: var(--text);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      .container {
         width: min(var(--max), calc(100% - 32px));
         margin: 0 auto;
       }
+
       .section-head {
         display: flex;
         align-items: end;
@@ -71,7 +140,8 @@
         margin: 10px 0 0;
         color: var(--muted);
       }
-    .pill-wrap {
+
+      .pill-wrap {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
@@ -87,6 +157,7 @@
         color: var(--muted);
         font-size: 13px;
       }
+
       .grid {
         display: grid;
         gap: 14px;
@@ -99,58 +170,75 @@
       .grid-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
-      </style>
-      </head>
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">Skills</h2>
-          </div>
+    </style>
+  </head>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot"></span>
+          <span>My Profile</span>
+        </a>
 
-          <div class="grid grid-3">
-            <div class="card">
-              <h3 class="card-title">Programming</h3>
-              <div class="pill-wrap">
-                <span class="pill">JavaScript</span>
-                <span class="pill">Java</span>
-              </div>
-            </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="about.html">About</a>
+          <a href="highlights.html">Highlights</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Skills</h2>
+      </div>
 
-            <div class="card">
-              <h3 class="card-title">Database</h3>
-              <div class="pill-wrap">
-                <span class="pill">MySQL</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Frameworks</h3>
-              <div class="pill-wrap">
-                <span class="pill">React</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Design Tools</h3>
-              <div class="pill-wrap">
-                <span class="pill">Figma</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Tools</h3>
-              <div class="pill-wrap">
-                <span class="pill">Docker</span>
-                <span class="pill">VS Code</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card-title">Version Control</h3>
-              <div class="pill-wrap">
-                <span class="pill">GitHub</span>
-              </div>
-            </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3 class="card-title">Programming</h3>
+          <div class="pill-wrap">
+            <span class="pill">JavaScript</span>
+            <span class="pill">Java</span>
           </div>
         </div>
-      </section>
+
+        <div class="card">
+          <h3 class="card-title">Database</h3>
+          <div class="pill-wrap">
+            <span class="pill">MySQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Frameworks</h3>
+          <div class="pill-wrap">
+            <span class="pill">React</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Design Tools</h3>
+          <div class="pill-wrap">
+            <span class="pill">Figma</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Tools</h3>
+          <div class="pill-wrap">
+            <span class="pill">Docker</span>
+            <span class="pill">VS Code</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Version Control</h3>
+          <div class="pill-wrap">
+            <span class="pill">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

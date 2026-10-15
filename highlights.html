@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
+
+<head>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Portfolio</title>
+  <meta name="description" content="Personal portfolio: About, Highlights, Skills, and Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <head>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Portfolio</title>
-    <meta
-      name="description"
-      content="Personal portfolio: About, Highlights, Skills, and Contact."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"/>
-      <head>
-        <style>
-            :root {
+    <style>
+      :root {
         --bg: #ffffff;
         --text: #111827;
         --muted: #6b7280;
@@ -31,10 +28,12 @@
         /* Anchor offset for sticky navbar (JS will update) */
         --navH: 64px;
       }
-        .container {
+
+      .container {
         width: min(var(--max), calc(100% - 32px));
         margin: 0 auto;
       }
+
       .grid {
         display: grid;
         gap: 14px;
@@ -47,36 +46,114 @@
       .grid-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
+
       @media (max-width: 860px) {
         .hero-card {
           grid-template-columns: 1fr;
         }
+
         .avatar {
           width: 100%;
           height: 220px;
         }
+
         .grid-2,
         .grid-3 {
           grid-template-columns: 1fr;
         }
+
         .nav-inner {
           flex-wrap: wrap;
         }
+
         .nav-links {
           justify-content: flex-start;
         }
       }
+
+      /* Navbar */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        gap: 14px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        padding: 8px 10px;
+        border-radius: 999px;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 14px;
+        border: 1px solid transparent;
+      }
+
+      .nav-links a:hover {
+        background: var(--panel);
+        color: var(--text);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
       /* ===== Highlight Card (image-top like reference) ===== */
       .portfolio-card {
         background: #fff;
         border-radius: 18px;
         border: 1px solid #eef0f3;
         box-shadow: 0 10px 26px rgba(16, 24, 40, 0.12);
-        overflow: hidden; /* ให้รูปโค้งตามมุมการ์ด */
+        overflow: hidden;
+        /* ให้รูปโค้งตามมุมการ์ด */
       }
 
       .portfolio-card__media {
-        height: clamp(180px, 20vw, 240px); /* ปรับได้ตามใจ เช่น 160-220 */
+        height: clamp(180px, 20vw, 240px);
+        /* ปรับได้ตามใจ เช่น 160-220 */
         background: #f3f4f6;
       }
 
@@ -96,7 +173,8 @@
         font-size: 20px;
         line-height: 1.2;
         font-weight: 800;
-        color: var(--accent); /* หัวข้อสีน้ำเงิน */
+        color: var(--accent);
+        /* หัวข้อสีน้ำเงิน */
       }
 
       .portfolio-card__desc {
@@ -112,55 +190,66 @@
           box-shadow 160ms ease;
         box-shadow: 0 14px 34px rgba(16, 24, 40, 0.14);
       }
-      </style>
-      </head>
-<!-- HIGHLIGHTS -->
-      <section id="highlights">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">Highlights</h2>
-          </div>
+    </style>
+  </head>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot"></span>
+          <span>My Profile</span>
+        </a>
 
-          <div class="grid grid-2">
-            <!-- Orbis Track -->
-            <article class="portfolio-card">
-              <div class="portfolio-card__media">
-                <img
-                  src="img/นายวชิรวิทย์ ชวนชม (1).png"
-                  alt="การเดินทางไปจีน"
-                />
-              </div>
-              <div class="portfolio-card__content">
-                <h3 class="portfolio-card__title">การเดินทางไปจีน</h3>
-                <p class="portfolio-card__desc">
-                  ข้าพเจ้าเป็นนักเรียนรุ่นที่1 
-                  ของสิรินธรราชวิทยาลัย 
-                  ที่ได้ไปศึกษาที่ประเทศจีนระยะเวลา4เดือน 
-                  ทำให้การใช้ภาษาจีนอยู่ระดับกลางและได้ผ่านการสอบ 
-                  hsk3(hsk汉语水平考试การสอบวัดระดับ)
-                </p>
-              </div>
-            </article>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="about.html">About</a>
+          <a href="highlights.html">Highlights</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- HIGHLIGHTS -->
+  <section id="highlights">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Highlights</h2>
+      </div>
 
-            <!-- MyMap -->
-            <article class="portfolio-card">
-              <div class="portfolio-card__media">
-                <img
-                  src="img/นายวชิรวิทย์ ชวนชม (2).png"
-                  alt="เป็นตัวแทนของโรงเรียน"
-                />
-              </div>
-              <div class="portfolio-card__content">
-                <h3 class="portfolio-card__title">
-                  เป็นตัวแทนของโรงเรียน
-                </h3>
-                <p class="portfolio-card__desc">
-                  ได้เป็นตัวแทนของโรงเรียนไปรับเสค็จพระเทพรัตนราชสุดาฯ
-                ในงานรับปริญญาที่หมาวิทยาลัยศิลปากร
-                </p>
-              </div>
-            </article>
-            </article>
+      <div class="grid grid-2">
+        <!-- Orbis Track -->
+        <article class="portfolio-card">
+          <div class="portfolio-card__media">
+            <img src="img/นายวชิรวิทย์ ชวนชม (1).png" alt="การเดินทางไปจีน" />
           </div>
-        </div>
-      </section>
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">การเดินทางไปจีน</h3>
+            <p class="portfolio-card__desc">
+              ข้าพเจ้าเป็นนักเรียนรุ่นที่1
+              ของสิรินธรราชวิทยาลัย
+              ที่ได้ไปศึกษาที่ประเทศจีนระยะเวลา4เดือน
+              ทำให้การใช้ภาษาจีนอยู่ระดับกลางและได้ผ่านการสอบ
+              hsk3(hsk汉语水平考试การสอบวัดระดับ)
+            </p>
+          </div>
+        </article>
+
+        <!-- MyMap -->
+        <article class="portfolio-card">
+          <div class="portfolio-card__media">
+            <img src="img/นายวชิรวิทย์ ชวนชม (2).png" alt="เป็นตัวแทนของโรงเรียน" />
+          </div>
+          <div class="portfolio-card__content">
+            <h3 class="portfolio-card__title">
+              เป็นตัวแทนของโรงเรียน
+            </h3>
+            <p class="portfolio-card__desc">
+              ได้เป็นตัวแทนของโรงเรียนไปรับเสค็จพระเทพรัตนราชสุดาฯ
+              ในงานรับปริญญาที่หมาวิทยาลัยศิลปากร
+            </p>
+          </div>
+        </article>
+        </article>
+      </div>
+    </div>
+  </section>

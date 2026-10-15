@@ -1,731 +1,701 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Portfolio</title>
-    <meta
-      name="description"
-      content="Personal portfolio: About, Highlights, Skills, and Contact."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      :root {
-        --bg: #ffffff;
-        --text: #111827;
-        --muted: #6b7280;
-        --line: #e5e7eb;
-        --panel: #f9fafb;
-        --panel-2: #f3f4f6;
-        --accent: #2563eb;
-        --radius: 14px;
-        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        --max: 1100px;
+<head>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Portfolio</title>
+  <meta name="description" content="Personal portfolio: About, Highlights, Skills, and Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        /* Anchor offset for sticky navbar (JS will update) */
-        --navH: 64px;
-      }
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --panel: #f9fafb;
+      --panel-2: #f3f4f6;
+      --accent: #2563eb;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --max: 1100px;
 
-      * {
-        box-sizing: border-box;
-      }
+      /* Anchor offset for sticky navbar (JS will update) */
+      --navH: 64px;
+    }
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: calc(var(--navH) + 12px);
-      }
+    * {
+      box-sizing: border-box;
+    }
 
-      body {
-        margin: 0;
-        font-family:
-          Inter,
-          system-ui,
-          -apple-system,
-          Segoe UI,
-          Roboto,
-          Arial,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--navH) + 12px);
+    }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-      .container {
-        width: min(var(--max), calc(100% - 32px));
-        margin: 0 auto;
-      }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-      /* Navbar */
-      .nav {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--line);
-      }
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-      .nav-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 0;
-        gap: 14px;
-      }
+    /* Navbar */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 800;
-        letter-spacing: 0.2px;
-      }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 14px;
+    }
 
-      .brand-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        background: var(--accent);
-      }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
 
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
 
-      .nav-links a {
-        padding: 8px 10px;
-        border-radius: 999px;
-        color: var(--muted);
-        font-weight: 700;
-        font-size: 14px;
-        border: 1px solid transparent;
-      }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-      .nav-links a:hover {
-        background: var(--panel);
-        color: var(--text);
-      }
+    .nav-links a {
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+    }
 
-      /* (Removed) .nav-links a.active styles */
+    .nav-links a:hover {
+      background: var(--panel);
+      color: var(--text);
+    }
 
-      /* Hero */
-      .hero {
-        padding: 34px 0 10px;
-      }
+    /* (Removed) .nav-links a.active styles */
 
+    /* Hero */
+    .hero {
+      padding: 34px 0 10px;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      padding: 18px;
+      border-radius: calc(var(--radius) + 6px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--panel-2);
+      display: grid;
+      place-items: center;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(22px, 3.2vw, 34px);
+      line-height: 1.15;
+    }
+
+    .hero-subtitle {
+      margin: 8px 0 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hero-desc {
+      margin: 0;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+
+    .cta-row {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--panel-2);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 22px 0;
+    }
+
+    section[id] {
+      scroll-margin-top: calc(var(--navH) + 12px);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.1px;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 860px) {
       .hero-card {
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 18px;
-        padding: 18px;
-        border-radius: calc(var(--radius) + 6px);
-        background: var(--panel);
-        border: 1px solid var(--line);
-        box-shadow: var(--shadow);
+        grid-template-columns: 1fr;
       }
 
       .avatar {
-        width: 140px;
-        height: 140px;
-        border-radius: 18px;
-        border: 1px solid var(--line);
-        overflow: hidden;
-        background: var(--panel-2);
-        display: grid;
-        place-items: center;
-      }
-
-      .avatar img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+        height: 220px;
       }
 
-      .hero-title {
-        margin: 0;
-        font-size: clamp(22px, 3.2vw, 34px);
-        line-height: 1.15;
-      }
-
-      .hero-subtitle {
-        margin: 8px 0 12px;
-        color: var(--muted);
-        font-weight: 700;
-      }
-
-      .hero-desc {
-        margin: 0;
-        color: var(--muted);
-        max-width: 78ch;
-      }
-
-      .cta-row {
-        margin-top: 14px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 14px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        color: var(--text);
-        font-weight: 800;
-        cursor: pointer;
-      }
-
-      .btn:hover {
-        background: var(--panel-2);
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        border-color: var(--accent);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        filter: brightness(1.05);
-        color: var(--accent);
-      }
-
-      /* Sections */
-      section {
-        padding: 22px 0;
-      }
-
-      section[id] {
-        scroll-margin-top: calc(var(--navH) + 12px);
-      }
-
-      .section-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 12px;
-      }
-
-      .section-title {
-        margin: 0;
-        font-size: 20px;
-        letter-spacing: 0.1px;
-      }
-
-      .section-note {
-        margin: 0;
-        color: var(--muted);
-        font-weight: 600;
-        font-size: 13px;
-      }
-
-      .grid {
-        display: grid;
-        gap: 14px;
-      }
-
-      .grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
+      .grid-2,
       .grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 1fr;
       }
 
-      @media (max-width: 860px) {
-        .hero-card {
-          grid-template-columns: 1fr;
-        }
-        .avatar {
-          width: 100%;
-          height: 220px;
-        }
-        .grid-2,
-        .grid-3 {
-          grid-template-columns: 1fr;
-        }
-        .nav-inner {
-          flex-wrap: wrap;
-        }
-        .nav-links {
-          justify-content: flex-start;
-        }
+      .nav-inner {
+        flex-wrap: wrap;
       }
 
-      .card {
-        border-radius: var(--radius);
-        background: var(--panel);
-        border: 1px solid var(--line);
-        padding: 14px;
+      .nav-links {
+        justify-content: flex-start;
       }
+    }
 
-      .card-title {
-        margin: 0 0 6px;
-        font-size: 16px;
-      }
+    .card {
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 14px;
+    }
 
-      .card-sub {
-        margin: 0;
-        color: var(--muted);
-        font-weight: 700;
-      }
+    .card-title {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
 
-      .card-text {
-        margin: 10px 0 0;
-        color: var(--muted);
-      }
+    .card-sub {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
 
-      /* Highlight block */
+    .card-text {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    /* Highlight block */
+    .hl {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .hl-img {
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--panel-2);
+      min-height: 110px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: 0.6px;
+    }
+
+    .hl-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 560px) {
       .hl {
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 12px;
-        align-items: stretch;
+        grid-template-columns: 1fr;
       }
+    }
 
-      .hl-img {
-        border-radius: 14px;
-        border: 1px solid var(--line);
-        overflow: hidden;
-        background: var(--panel-2);
-        min-height: 110px;
-        display: grid;
-        place-items: center;
-        color: var(--muted);
-        font-weight: 800;
-        letter-spacing: 0.6px;
-      }
+    /* Skills pills */
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
 
-      .hl-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
+    .pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      font-weight: 800;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-      @media (max-width: 560px) {
-        .hl {
-          grid-template-columns: 1fr;
-        }
-      }
+    /* Contact links */
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-      /* Skills pills */
-      .pill-wrap {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
+    .social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      font-weight: 800;
+    }
 
-      .pill {
-        padding: 7px 10px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        font-weight: 800;
-        color: var(--muted);
-        font-size: 13px;
-      }
+    .social:hover {
+      background: var(--panel-2);
+    }
 
-      /* Contact links */
-      .socials {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
+    .social svg {
+      width: 18px;
+      height: 18px;
+    }
 
-      .social {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 12px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        font-weight: 800;
-      }
+    footer {
+      padding: 18px 0 26px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 10px;
+    }
 
-      .social:hover {
-        background: var(--panel-2);
-      }
+    /* ===== Highlight Card (image-top like reference) ===== */
+    .portfolio-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #eef0f3;
+      box-shadow: 0 10px 26px rgba(16, 24, 40, 0.12);
+      overflow: hidden;
+      /* ให้รูปโค้งตามมุมการ์ด */
+    }
 
-      .social svg {
-        width: 18px;
-        height: 18px;
-      }
+    .portfolio-card__media {
+      height: clamp(180px, 20vw, 240px);
+      /* ปรับได้ตามใจ เช่น 160-220 */
+      background: #f3f4f6;
+    }
 
-      footer {
-        padding: 18px 0 26px;
-        color: var(--muted);
-        border-top: 1px solid var(--line);
-        margin-top: 10px;
-      }
+    .portfolio-card__media img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
 
-      /* ===== Highlight Card (image-top like reference) ===== */
-      .portfolio-card {
-        background: #fff;
-        border-radius: 18px;
-        border: 1px solid #eef0f3;
-        box-shadow: 0 10px 26px rgba(16, 24, 40, 0.12);
-        overflow: hidden; /* ให้รูปโค้งตามมุมการ์ด */
-      }
+    .portfolio-card__content {
+      padding: 18px 18px 20px;
+    }
 
-      .portfolio-card__media {
-        height: clamp(180px, 20vw, 240px); /* ปรับได้ตามใจ เช่น 160-220 */
-        background: #f3f4f6;
-      }
+    .portfolio-card__title {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--accent);
+      /* หัวข้อสีน้ำเงิน */
+    }
 
-      .portfolio-card__media img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-      }
+    .portfolio-card__desc {
+      margin: 0;
+      color: var(--muted);
+    }
 
-      .portfolio-card__content {
-        padding: 18px 18px 20px;
-      }
+    /* (optional) hover lift ให้ดูนุ่มนวล */
+    .portfolio-card:hover {
+      transform: translateY(-2px);
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+      box-shadow: 0 14px 34px rgba(16, 24, 40, 0.14);
+    }
+  </style>
+</head>
 
-      .portfolio-card__title {
-        margin: 0 0 8px;
-        font-size: 20px;
-        line-height: 1.2;
-        font-weight: 800;
-        color: var(--accent); /* หัวข้อสีน้ำเงิน */
-      }
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot"></span>
+          <span>My Profile</span>
+        </a>
 
-      .portfolio-card__desc {
-        margin: 0;
-        color: var(--muted);
-      }
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#highlights">Highlights</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-      /* (optional) hover lift ให้ดูนุ่มนวล */
-      .portfolio-card:hover {
-        transform: translateY(-2px);
-        transition:
-          transform 160ms ease,
-          box-shadow 160ms ease;
-        box-shadow: 0 14px 34px rgba(16, 24, 40, 0.14);
-      }
-    </style>
-  </head>
-
-  <body>
-    <header class="nav">
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
       <div class="container">
-        <div class="nav-inner">
-          <a class="brand" href="#top" aria-label="Go to top">
-            <span class="brand-dot"></span>
-            <span>My Profile</span>
-          </a>
+        <div class="hero-card">
+          <div class="avatar">
+            <!-- EDIT HERE: replace src with your image path -->
+            <img src="img/img.jpg" alt="Profile photo" />
+          </div>
 
-          <nav class="nav-links" aria-label="Primary navigation">
-            <a href="#about">About</a>
-            <a href="#highlights">Highlights</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact Me</a>
-          </nav>
+          <div>
+            <!-- EDIT HERE -->
+            <h1 class="hero-title">Vachiravit Chuanchom</h1>
+            <div class="hero-subtitle">Software Engineering</div>
+            <p class="hero-desc">
+              สวัสดีครับผมมีชื่อเล่นว่า หมีพูห์
+              ปัจจุบันผมยังเป็นนักศึกษาและกำลังมองหาโอกาสในการพัฒนาตนเอง
+              พร้อมที่จะหาเทคนิคและความรู้ใหม่ๆ
+              เพิ่มนำมาปรับใช้ในการทำงานจริงครับ
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">
+                Contact Me <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn" href="#skills">
+                View Skills <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main id="top">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero-card">
-            <div class="avatar">
-              <!-- EDIT HERE: replace src with your image path -->
-              <img
-                src="img/img.jpg"
-                alt="Profile photo"
-              />
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="card">
+          <p class="card-text">
+            นักศึกษาชั้นปีที่ 2 สาขาวิศวกรรมซอฟต์แวร์
+            มีประสบการณ์การทำงานเป็นทีมในการออกแบบและพัฒนาระบบตามความต้องการของบริษัท
+            ทั้งบนแพลตฟอร์มเดสก์ท็อปและอุปกรณ์เคลื่อนที่
+            และกำลังมองหาโอกาสในการพัฒนาทักษะของตนเอง
+            เพื่อนำความรู้และประสบการณ์ที่มีไปประยุกต์ใช้ในการทำงานจริง
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section id="highlights">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Highlights</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Orbis Track -->
+          <article class="portfolio-card">
+            <div class="portfolio-card__media">
+              <img src="img/นายวชิรวิทย์ ชวนชม (1).png" alt="การเดินทางไปจีน" />
             </div>
-
-            <div>
-              <!-- EDIT HERE -->
-              <h1 class="hero-title">Vachiravit Chuanchom</h1>
-              <div class="hero-subtitle">Software Engineering</div>
-              <p class="hero-desc">
-                สวัสดีครับผมมีชื่อเล่นว่า หมีพูห์
-                ปัจจุบันผมยังเป็นนักศึกษาและกำลังมองหาโอกาสในการพัฒนาตนเอง
-                พร้อมที่จะหาเทคนิคและความรู้ใหม่ๆ
-                เพิ่มนำมาปรับใช้ในการทำงานจริงครับ
+            <div class="portfolio-card__content">
+              <h3 class="portfolio-card__title">การเดินทางไปจีน</h3>
+              <p class="portfolio-card__desc">
+                ข้าพเจ้าเป็นนักเรียนรุ่นที่1
+                ของสิรินธรราชวิทยาลัย
+                ที่ได้ไปศึกษาที่ประเทศจีนระยะเวลา4เดือน
+                ทำให้การใช้ภาษาจีนอยู่ระดับกลางและได้ผ่านการสอบ
+                hsk3(hsk汉语水平考试การสอบวัดระดับ)
               </p>
-
-              <div class="cta-row">
-                <a class="btn btn-primary" href="#contact">
-                  Contact Me <span aria-hidden="true">→</span>
-                </a>
-                <a class="btn" href="#skills">
-                  View Skills <span aria-hidden="true">→</span>
-                </a>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <!-- ABOUT -->
-      <section id="about">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">About Me</h2>
-          </div>
-
-          <div class="card">
-            <p class="card-text">
-              นักศึกษาชั้นปีที่ 2 สาขาวิศวกรรมซอฟต์แวร์
-              มีประสบการณ์การทำงานเป็นทีมในการออกแบบและพัฒนาระบบตามความต้องการของบริษัท
-              ทั้งบนแพลตฟอร์มเดสก์ท็อปและอุปกรณ์เคลื่อนที่
-              และกำลังมองหาโอกาสในการพัฒนาทักษะของตนเอง
-              เพื่อนำความรู้และประสบการณ์ที่มีไปประยุกต์ใช้ในการทำงานจริง
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- HIGHLIGHTS -->
-      <section id="highlights">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">Highlights</h2>
-          </div>
-
-          <div class="grid grid-2">
-            <!-- Orbis Track -->
-            <article class="portfolio-card">
-              <div class="portfolio-card__media">
-                <img
-                  src="img/นายวชิรวิทย์ ชวนชม (1).png"
-                  alt="การเดินทางไปจีน"
-                />
-              </div>
-              <div class="portfolio-card__content">
-                <h3 class="portfolio-card__title">การเดินทางไปจีน</h3>
-                <p class="portfolio-card__desc">
-                  ข้าพเจ้าเป็นนักเรียนรุ่นที่1 
-                  ของสิรินธรราชวิทยาลัย 
-                  ที่ได้ไปศึกษาที่ประเทศจีนระยะเวลา4เดือน 
-                  ทำให้การใช้ภาษาจีนอยู่ระดับกลางและได้ผ่านการสอบ 
-                  hsk3(hsk汉语水平考试การสอบวัดระดับ)
-                </p>
-              </div>
-            </article>
-
-            <!-- MyMap -->
-            <article class="portfolio-card">
-              <div class="portfolio-card__media">
-                <img
-                  src="img/นายวชิรวิทย์ ชวนชม (2).png"
-                  alt="เป็นตัวแทนของโรงเรียน"
-                />
-              </div>
-              <div class="portfolio-card__content">
-                <h3 class="portfolio-card__title">
-                  เป็นตัวแทนของโรงเรียน
-                </h3>
-                <p class="portfolio-card__desc">
-                  ได้เป็นตัวแทนของโรงเรียนไปรับเสค็จพระเทพรัตนราชสุดาฯ
+          <!-- MyMap -->
+          <article class="portfolio-card">
+            <div class="portfolio-card__media">
+              <img src="img/นายวชิรวิทย์ ชวนชม (2).png" alt="เป็นตัวแทนของโรงเรียน" />
+            </div>
+            <div class="portfolio-card__content">
+              <h3 class="portfolio-card__title">
+                เป็นตัวแทนของโรงเรียน
+              </h3>
+              <p class="portfolio-card__desc">
+                ได้เป็นตัวแทนของโรงเรียนไปรับเสค็จพระเทพรัตนราชสุดาฯ
                 ในงานรับปริญญาที่หมาวิทยาลัยศิลปากร
-                </p>
-              </div>
-            </article>
-            </article>
-          </div>
+              </p>
+            </div>
+          </article>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">Skills</h2>
-          </div>
-
-          <div class="grid grid-3">
-            <div class="card">
-              <h3 class="card-title">Programming</h3>
-              <div class="pill-wrap">
-                <span class="pill">JavaScript</span>
-                <span class="pill">Java</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Database</h3>
-              <div class="pill-wrap">
-                <span class="pill">MySQL</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Frameworks</h3>
-              <div class="pill-wrap">
-                <span class="pill">React</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Design Tools</h3>
-              <div class="pill-wrap">
-                <span class="pill">Figma</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Tools</h3>
-              <div class="pill-wrap">
-                <span class="pill">Docker</span>
-                <span class="pill">VS Code</span>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3 class="card-title">Version Control</h3>
-              <div class="pill-wrap">
-                <span class="pill">GitHub</span>
-              </div>
-            </div>
-          </div>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Skills</h2>
         </div>
-      </section>
 
-      <!-- CONTACT -->
-      <section id="contact">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">Contact Me</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 class="card-title">Programming</h3>
+            <div class="pill-wrap">
+              <span class="pill">JavaScript</span>
+              <span class="pill">Java</span>
+            </div>
           </div>
 
           <div class="card">
-            <h3 class="card-title">Social</h3>
+            <h3 class="card-title">Database</h3>
+            <div class="pill-wrap">
+              <span class="pill">MySQL</span>
+            </div>
+          </div>
 
-            <div class="socials" style="margin-top: 10px">
-              <!-- LINE -->
-              <a
-                class="social"
-                href="https://line.me/ti/p/S-ewH2rlYh"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="simple-icons:line"></span>
-                LINE
-              </a>
+          <div class="card">
+            <h3 class="card-title">Frameworks</h3>
+            <div class="pill-wrap">
+              <span class="pill">React</span>
+            </div>
+          </div>
 
-              <!-- Facebook -->
-              <a
-                class="social"
-                href="https://www.facebook.com/profile.php?id=61562840742399&locale=th_TH"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:facebook"></span>
-                Facebook
-              </a>
+          <div class="card">
+            <h3 class="card-title">Design Tools</h3>
+            <div class="pill-wrap">
+              <span class="pill">Figma</span>
+            </div>
+          </div>
 
-              <!-- Instagram -->
-              <a
-                class="social"
-                href="https://www.instagram.com/poohzo159357/"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:instagram-icon"></span>
-                Instagram
-              </a>
+          <div class="card">
+            <h3 class="card-title">Tools</h3>
+            <div class="pill-wrap">
+              <span class="pill">Docker</span>
+              <span class="pill">VS Code</span>
+            </div>
+          </div>
 
-              <!-- GitHub -->
-              <a
-                class="social"
-                href="https://github.com/pooh159357"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:github-icon"></span>
-                GitHub
-              </a>
-
-              <!-- Discord -->
-              <a
-                class="social"
-                href="https://discord.com/users/463857570004598784"
-                target="_blank"
-                rel="noopener"
-              >
-                <span class="iconify" data-icon="logos:discord-icon"></span>
-                Discord
-              </a>
+          <div class="card">
+            <h3 class="card-title">Version Control</h3>
+            <div class="pill-wrap">
+              <span class="pill">GitHub</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer>
-        <div class="container">
-          © <span id="year"></span> Vachiravit. All rights reserved.
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Contact Me</h2>
         </div>
-      </footer>
-    </main>
 
-    <script>
-      // Footer year
-      document.getElementById("year").textContent = new Date().getFullYear();
+        <div class="card">
+          <h3 class="card-title">Social</h3>
 
-      // --- Fix anchor offset for sticky navbar (auto nav height) ---
-      const navEl = document.querySelector(".nav");
+          <div class="socials" style="margin-top: 10px">
+            <!-- LINE -->
+            <a class="social" href="https://line.me/ti/p/S-ewH2rlYh" target="_blank" rel="noopener">
+              <span class="iconify" data-icon="simple-icons:line"></span>
+              LINE
+            </a>
 
-      const setNavHeight = () => {
-        if (!navEl) return;
-        document.documentElement.style.setProperty(
-          "--navH",
-          `${navEl.offsetHeight}px`,
-        );
-      };
+            <!-- Facebook -->
+            <a class="social" href="https://www.facebook.com/profile.php?id=61562840742399&locale=th_TH" target="_blank"
+              rel="noopener">
+              <span class="iconify" data-icon="logos:facebook"></span>
+              Facebook
+            </a>
 
-      window.addEventListener("load", setNavHeight);
-      window.addEventListener("resize", setNavHeight);
-      setNavHeight();
+            <!-- Instagram -->
+            <a class="social" href="https://www.instagram.com/poohzo159357/" target="_blank" rel="noopener">
+              <span class="iconify" data-icon="logos:instagram-icon"></span>
+              Instagram
+            </a>
 
-      // --- Force accurate smooth scroll on nav click (no active color changes) ---
-      document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (e) => {
-          const hash = link.getAttribute("href");
-          const id = hash?.slice(1);
-          const target = id ? document.getElementById(id) : null;
-          if (!target) return;
+            <!-- GitHub -->
+            <a class="social" href="https://github.com/pooh159357" target="_blank" rel="noopener">
+              <span class="iconify" data-icon="logos:github-icon"></span>
+              GitHub
+            </a>
 
-          e.preventDefault();
-          const navH = navEl ? navEl.offsetHeight : 0;
-          const y =
-            target.getBoundingClientRect().top + window.scrollY - navH - 12;
+            <!-- Discord -->
+            <a class="social" href="https://discord.com/users/463857570004598784" target="_blank" rel="noopener">
+              <span class="iconify" data-icon="logos:discord-icon"></span>
+              Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          window.scrollTo({ top: y, behavior: "smooth" });
-          history.pushState(null, "", hash);
-        });
+    <footer>
+      <div class="container">
+        © <span id="year"></span> Vachiravit. All rights reserved.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // --- Fix anchor offset for sticky navbar (auto nav height) ---
+    const navEl = document.querySelector(".nav");
+
+    const setNavHeight = () => {
+      if (!navEl) return;
+      document.documentElement.style.setProperty(
+        "--navH",
+        `${navEl.offsetHeight}px`,
+      );
+    };
+
+    window.addEventListener("load", setNavHeight);
+    window.addEventListener("resize", setNavHeight);
+    setNavHeight();
+
+    // --- Force accurate smooth scroll on nav click (no active color changes) ---
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const hash = link.getAttribute("href");
+        const id = hash?.slice(1);
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+
+        e.preventDefault();
+        const navH = navEl ? navEl.offsetHeight : 0;
+        const y =
+          target.getBoundingClientRect().top + window.scrollY - navH - 12;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+        history.pushState(null, "", hash);
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

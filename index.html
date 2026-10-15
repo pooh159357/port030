@@ -1,542 +1,542 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile | Portfolio</title>
-    <meta
-      name="description"
-      content="Personal portfolio: About, Highlights, Skills, and Contact."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      :root {
-        --bg: #ffffff;
-        --text: #111827;
-        --muted: #6b7280;
-        --line: #e5e7eb;
-        --panel: #f9fafb;
-        --panel-2: #f3f4f6;
-        --accent: #2563eb;
-        --radius: 14px;
-        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        --max: 1100px;
+<head>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Portfolio</title>
+  <meta name="description" content="Personal portfolio: About, Highlights, Skills, and Contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        /* Anchor offset for sticky navbar (JS will update) */
-        --navH: 64px;
-      }
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --panel: #f9fafb;
+      --panel-2: #f3f4f6;
+      --accent: #2563eb;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --max: 1100px;
 
-      * {
-        box-sizing: border-box;
-      }
+      /* Anchor offset for sticky navbar (JS will update) */
+      --navH: 64px;
+    }
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: calc(var(--navH) + 12px);
-      }
+    * {
+      box-sizing: border-box;
+    }
 
-      body {
-        margin: 0;
-        font-family:
-          Inter,
-          system-ui,
-          -apple-system,
-          Segoe UI,
-          Roboto,
-          Arial,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-      }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--navH) + 12px);
+    }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-      .container {
-        width: min(var(--max), calc(100% - 32px));
-        margin: 0 auto;
-      }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-      /* Navbar */
-      .nav {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--line);
-      }
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-      .nav-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 0;
-        gap: 14px;
-      }
+    /* Navbar */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 800;
-        letter-spacing: 0.2px;
-      }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 14px;
+    }
 
-      .brand-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        background: var(--accent);
-      }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
 
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
 
-      .nav-links a {
-        padding: 8px 10px;
-        border-radius: 999px;
-        color: var(--muted);
-        font-weight: 700;
-        font-size: 14px;
-        border: 1px solid transparent;
-      }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-      .nav-links a:hover {
-        background: var(--panel);
-        color: var(--text);
-      }
+    .nav-links a {
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+    }
 
-      /* (Removed) .nav-links a.active styles */
+    .nav-links a:hover {
+      background: var(--panel);
+      color: var(--text);
+    }
 
-      /* Hero */
-      .hero {
-        padding: 34px 0 10px;
-      }
+    /* (Removed) .nav-links a.active styles */
 
+    /* Hero */
+    .hero {
+      padding: 34px 0 10px;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      padding: 18px;
+      border-radius: calc(var(--radius) + 6px);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--panel-2);
+      display: grid;
+      place-items: center;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(22px, 3.2vw, 34px);
+      line-height: 1.15;
+    }
+
+    .hero-subtitle {
+      margin: 8px 0 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hero-desc {
+      margin: 0;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+
+    .cta-row {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--panel-2);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 22px 0;
+    }
+
+    section[id] {
+      scroll-margin-top: calc(var(--navH) + 12px);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.1px;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 860px) {
       .hero-card {
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 18px;
-        padding: 18px;
-        border-radius: calc(var(--radius) + 6px);
-        background: var(--panel);
-        border: 1px solid var(--line);
-        box-shadow: var(--shadow);
+        grid-template-columns: 1fr;
       }
 
       .avatar {
-        width: 140px;
-        height: 140px;
-        border-radius: 18px;
-        border: 1px solid var(--line);
-        overflow: hidden;
-        background: var(--panel-2);
-        display: grid;
-        place-items: center;
-      }
-
-      .avatar img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+        height: 220px;
       }
 
-      .hero-title {
-        margin: 0;
-        font-size: clamp(22px, 3.2vw, 34px);
-        line-height: 1.15;
-      }
-
-      .hero-subtitle {
-        margin: 8px 0 12px;
-        color: var(--muted);
-        font-weight: 700;
-      }
-
-      .hero-desc {
-        margin: 0;
-        color: var(--muted);
-        max-width: 78ch;
-      }
-
-      .cta-row {
-        margin-top: 14px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 14px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        color: var(--text);
-        font-weight: 800;
-        cursor: pointer;
-      }
-
-      .btn:hover {
-        background: var(--panel-2);
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        border-color: var(--accent);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        filter: brightness(1.05);
-        color: var(--accent);
-      }
-
-      /* Sections */
-      section {
-        padding: 22px 0;
-      }
-
-      section[id] {
-        scroll-margin-top: calc(var(--navH) + 12px);
-      }
-
-      .section-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 12px;
-      }
-
-      .section-title {
-        margin: 0;
-        font-size: 20px;
-        letter-spacing: 0.1px;
-      }
-
-      .section-note {
-        margin: 0;
-        color: var(--muted);
-        font-weight: 600;
-        font-size: 13px;
-      }
-
-      .grid {
-        display: grid;
-        gap: 14px;
-      }
-
-      .grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
+      .grid-2,
       .grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 1fr;
       }
 
-      @media (max-width: 860px) {
-        .hero-card {
-          grid-template-columns: 1fr;
-        }
-        .avatar {
-          width: 100%;
-          height: 220px;
-        }
-        .grid-2,
-        .grid-3 {
-          grid-template-columns: 1fr;
-        }
-        .nav-inner {
-          flex-wrap: wrap;
-        }
-        .nav-links {
-          justify-content: flex-start;
-        }
+      .nav-inner {
+        flex-wrap: wrap;
       }
 
-      .card {
-        border-radius: var(--radius);
-        background: var(--panel);
-        border: 1px solid var(--line);
-        padding: 14px;
+      .nav-links {
+        justify-content: flex-start;
       }
+    }
 
-      .card-title {
-        margin: 0 0 6px;
-        font-size: 16px;
-      }
+    .card {
+      border-radius: var(--radius);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 14px;
+    }
 
-      .card-sub {
-        margin: 0;
-        color: var(--muted);
-        font-weight: 700;
-      }
+    .card-title {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
 
-      .card-text {
-        margin: 10px 0 0;
-        color: var(--muted);
-      }
+    .card-sub {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
 
-      /* Highlight block */
+    .card-text {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    /* Highlight block */
+    .hl {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .hl-img {
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--panel-2);
+      min-height: 110px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: 0.6px;
+    }
+
+    .hl-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 560px) {
       .hl {
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 12px;
-        align-items: stretch;
+        grid-template-columns: 1fr;
       }
+    }
 
-      .hl-img {
-        border-radius: 14px;
-        border: 1px solid var(--line);
-        overflow: hidden;
-        background: var(--panel-2);
-        min-height: 110px;
-        display: grid;
-        place-items: center;
-        color: var(--muted);
-        font-weight: 800;
-        letter-spacing: 0.6px;
-      }
+    /* Skills pills */
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
 
-      .hl-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
+    .pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      font-weight: 800;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-      @media (max-width: 560px) {
-        .hl {
-          grid-template-columns: 1fr;
-        }
-      }
+    /* Contact links */
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-      /* Skills pills */
-      .pill-wrap {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
+    .social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      font-weight: 800;
+    }
 
-      .pill {
-        padding: 7px 10px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        font-weight: 800;
-        color: var(--muted);
-        font-size: 13px;
-      }
+    .social:hover {
+      background: var(--panel-2);
+    }
 
-      /* Contact links */
-      .socials {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
+    .social svg {
+      width: 18px;
+      height: 18px;
+    }
 
-      .social {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 12px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        background: #ffffff;
-        font-weight: 800;
-      }
+    footer {
+      padding: 18px 0 26px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 10px;
+    }
 
-      .social:hover {
-        background: var(--panel-2);
-      }
+    /* ===== Highlight Card (image-top like reference) ===== */
+    .portfolio-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #eef0f3;
+      box-shadow: 0 10px 26px rgba(16, 24, 40, 0.12);
+      overflow: hidden;
+      /* ให้รูปโค้งตามมุมการ์ด */
+    }
 
-      .social svg {
-        width: 18px;
-        height: 18px;
-      }
+    .portfolio-card__media {
+      height: clamp(180px, 20vw, 240px);
+      /* ปรับได้ตามใจ เช่น 160-220 */
+      background: #f3f4f6;
+    }
 
-      footer {
-        padding: 18px 0 26px;
-        color: var(--muted);
-        border-top: 1px solid var(--line);
-        margin-top: 10px;
-      }
+    .portfolio-card__media img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
 
-      /* ===== Highlight Card (image-top like reference) ===== */
-      .portfolio-card {
-        background: #fff;
-        border-radius: 18px;
-        border: 1px solid #eef0f3;
-        box-shadow: 0 10px 26px rgba(16, 24, 40, 0.12);
-        overflow: hidden; /* ให้รูปโค้งตามมุมการ์ด */
-      }
+    .portfolio-card__content {
+      padding: 18px 18px 20px;
+    }
 
-      .portfolio-card__media {
-        height: clamp(180px, 20vw, 240px); /* ปรับได้ตามใจ เช่น 160-220 */
-        background: #f3f4f6;
-      }
+    .portfolio-card__title {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--accent);
+      /* หัวข้อสีน้ำเงิน */
+    }
 
-      .portfolio-card__media img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-      }
+    .portfolio-card__desc {
+      margin: 0;
+      color: var(--muted);
+    }
 
-      .portfolio-card__content {
-        padding: 18px 18px 20px;
-      }
+    /* (optional) hover lift ให้ดูนุ่มนวล */
+    .portfolio-card:hover {
+      transform: translateY(-2px);
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+      box-shadow: 0 14px 34px rgba(16, 24, 40, 0.14);
+    }
+  </style>
+</head>
 
-      .portfolio-card__title {
-        margin: 0 0 8px;
-        font-size: 20px;
-        line-height: 1.2;
-        font-weight: 800;
-        color: var(--accent); /* หัวข้อสีน้ำเงิน */
-      }
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot"></span>
+          <span>My Profile</span>
+        </a>
 
-      .portfolio-card__desc {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      /* (optional) hover lift ให้ดูนุ่มนวล */
-      .portfolio-card:hover {
-        transform: translateY(-2px);
-        transition:
-          transform 160ms ease,
-          box-shadow 160ms ease;
-        box-shadow: 0 14px 34px rgba(16, 24, 40, 0.14);
-      }
-    </style>
-  </head>
-
-  <body>
-    <header class="nav">
-      <div class="container">
-        <div class="nav-inner">
-          <a class="brand" href="#top" aria-label="Go to top">
-            <span class="brand-dot"></span>
-            <span>My Profile</span>
-          </a>
-
-          <nav class="nav-links" aria-label="Primary navigation">
-            <a href="about.html">About</a>
-            <a href="highlights.html">Highlights</a>
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact Me</a>
-          </nav>
-        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="about.html">About</a>
+          <a href="highlights.html">Highlights</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact Me</a>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main id="top">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero-card">
-            <div class="avatar">
-              <!-- EDIT HERE: replace src with your image path -->
-              <img
-                src="img/img.jpg"
-                alt="Profile photo"
-              />
-            </div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="avatar">
+            <!-- EDIT HERE: replace src with your image path -->
+            <img src="img/img.jpg" alt="Profile photo" />
+          </div>
 
-            <div>
-              <!-- EDIT HERE -->
-              <h1 class="hero-title">Vachiravit Chuanchom</h1>
-              <div class="hero-subtitle">Software Engineering</div>
-              <p class="hero-desc">
-                สวัสดีครับผมมีชื่อเล่นว่า หมีพูห์
-                ปัจจุบันผมยังเป็นนักศึกษาและกำลังมองหาโอกาสในการพัฒนาตนเอง
-                พร้อมที่จะหาเทคนิคและความรู้ใหม่ๆ
-                เพิ่มนำมาปรับใช้ในการทำงานจริงครับ
-              </p>
+          <div>
+            <!-- EDIT HERE -->
+            <h1 class="hero-title">Vachiravit Chuanchom</h1>
+            <div class="hero-subtitle">Software Engineering</div>
+            <p class="hero-desc">
+              สวัสดีครับผมมีชื่อเล่นว่า หมีพูห์
+              ปัจจุบันผมยังเป็นนักศึกษาและกำลังมองหาโอกาสในการพัฒนาตนเอง
+              พร้อมที่จะหาเทคนิคและความรู้ใหม่ๆ
+              เพิ่มนำมาปรับใช้ในการทำงานจริงครับ
+            </p>
 
-              <div class="cta-row">
-                <a class="btn btn-primary" href="contact.html">
-                  Contact Me <span aria-hidden="true">→</span>
-                </a>
-                <a class="btn" href="skills.html">
-                  View Skills <span aria-hidden="true">→</span>
-                </a>
-                <a class="btn" href="index00.html">
-                  view on a single page <span aria-hidden="true">→</span>
-                </a>
-              </div>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="contact.html">
+                Contact Me <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn" href="skills.html">
+                View Skills <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn" href="index00.html">
+                view on a single page <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      
+      </div>
+    </section>
 
-      
 
-      <footer>
-        <div class="container">
-          © <span id="year"></span> Vachiravit. All rights reserved.
-        </div>
-      </footer>
-    </main>
 
-    <script>
-      // Footer year
-      document.getElementById("year").textContent = new Date().getFullYear();
 
-      // --- Fix anchor offset for sticky navbar (auto nav height) ---
-      const navEl = document.querySelector(".nav");
+    <footer>
+      <div class="container">
+        © <span id="year"></span> Vachiravit. All rights reserved.
+      </div>
+    </footer>
+  </main>
 
-      const setNavHeight = () => {
-        if (!navEl) return;
-        document.documentElement.style.setProperty(
-          "--navH",
-          `${navEl.offsetHeight}px`,
-        );
-      };
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-      window.addEventListener("load", setNavHeight);
-      window.addEventListener("resize", setNavHeight);
-      setNavHeight();
+    // --- Fix anchor offset for sticky navbar (auto nav height) ---
+    const navEl = document.querySelector(".nav");
 
-      // --- Force accurate smooth scroll on nav click (no active color changes) ---
-      document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (e) => {
-          const hash = link.getAttribute("href");
-          const id = hash?.slice(1);
-          const target = id ? document.getElementById(id) : null;
-          if (!target) return;
+    const setNavHeight = () => {
+      if (!navEl) return;
+      document.documentElement.style.setProperty(
+        "--navH",
+        `${navEl.offsetHeight}px`,
+      );
+    };
 
-          e.preventDefault();
-          const navH = navEl ? navEl.offsetHeight : 0;
-          const y =
-            target.getBoundingClientRect().top + window.scrollY - navH - 12;
+    window.addEventListener("load", setNavHeight);
+    window.addEventListener("resize", setNavHeight);
+    setNavHeight();
 
-          window.scrollTo({ top: y, behavior: "smooth" });
-          history.pushState(null, "", hash);
-        });
+    // --- Force accurate smooth scroll on nav click (no active color changes) ---
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const hash = link.getAttribute("href");
+        const id = hash?.slice(1);
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+
+        e.preventDefault();
+        const navH = navEl ? navEl.offsetHeight : 0;
+        const y =
+          target.getBoundingClientRect().top + window.scrollY - navH - 12;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+        history.pushState(null, "", hash);
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
